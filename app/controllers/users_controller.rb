@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def show
-    @items = current_user.items
+    @items = Item.where(user_id: current_user.id)
   end
 end
